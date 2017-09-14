@@ -1,0 +1,19 @@
+{
+  "name": "swe-project",
+  "version": "1.0.0",
+  "description": "Project for SWE 3313",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migueltol22/SoftwareEngineering3313.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migueltol22/SoftwareEngineering3313/issues"
+  },
+  "homepage": "https://github.com/migueltol22/SoftwareEngineering3313#readme"
+}
