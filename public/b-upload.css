@@ -1,0 +1,29 @@
+/*Note: CSS style sheet for book-upload.html*/
+
+body {
+    /*    background-color:floralwhite;*/
+    background-color: #FAFAFA;
+
+}
+
+.container {
+    margin-top: 100px;
+}
+
+
+.d-box {
+    border-color: lightgrey;
+
+}
+
+
+form {
+    border: 5px solid #80DED9;
+    border-radius: 10px;
+
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #D7F0F2;
+}

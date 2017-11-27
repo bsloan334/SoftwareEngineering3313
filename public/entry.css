@@ -1,0 +1,217 @@
+/*This is the CSS style page for the book-results, rental-history, and renting-out html files*/
+
+body {
+    background-color: #FAFAFA;
+}
+
+
+
+.h1-mainheader {
+    text-align: left:
+}
+
+
+
+
+.entry-container {
+    height: 300px;
+    /*    width: 900px;*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /*    border: 1px solid black;*/
+    padding-bottom: 5px;
+    padding-top: 5px;
+    /*    background-color: #97e1ff;*/
+    position: relative;
+}
+
+.img-con {
+
+    margin-left: 10px;
+    width: 30%;
+    max-width: 300px;
+    height: 100%;
+    float: left;
+    position: relative;
+    border: 5px solid #80DED9;
+    box-sizing: border-box;
+
+}
+
+.img-con img {
+    max-width: 290px;
+    min-width: 290px;
+    height: 100%;
+}
+
+.info-con {
+    /*    border: 1px solid black;*/
+    float: right;
+    margin-left: auto;
+    padding-left: 20px;
+    height: 100%;
+    width: 75%;
+    position: relative;
+
+}
+
+.book-entry {
+
+    border: 5px solid #80DED9;
+    height: 80%;
+    width: 1440px;
+    margin: 25px auto auto auto;
+    position: relative;
+    /*    background-color: #A0E1FF;*/
+    /*    background-color: #75B6D0;*/
+    /*    background-color: #5FA0CE;*/
+    background-color: #D7F0F2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+
+
+.left-info {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+
+}
+
+.book-title {
+    position: relative;
+    float: left;
+}
+
+.bt-style {
+    font-size: 40px;
+}
+
+.author-name {
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    padding-top: 22px;
+}
+
+.isbn {
+    position: relative;
+    float: left;
+    clear: left;
+}
+
+.owner {
+    position: relative;
+    float: left;
+    clear: left;
+    padding-top: 30px;
+
+}
+
+
+
+.profile-link {
+    position: relative;
+    clear: left;
+}
+
+.email-info {
+    position: relative;
+    float: left;
+    clear: left;
+
+}
+
+
+
+.right-info {
+    position: relative;
+    float: left;
+    /*    border: 1px solid blue;*/
+    height: 100%;
+    width: 50%;
+    padding-right: 23px;
+}
+
+
+.rent-button {
+    float: right;
+    clear: right;
+    padding-top: 20px;
+    padding-right: 10px;
+
+}
+
+.text-style {
+    font-family: sans-serif serif;
+    color: #505050;
+
+}
+
+.form-inline {
+    padding-left: 105px;
+}
+
+.search-container {
+    margin-top: 75px;
+    margin-bottom: 72px;
+}
+
+
+
+/*
+.btn-outline-info {
+    border-color: #80DED9;
+   
+}
+*/
+
+/* ----------------v Unique RENTING OUT page styles v -----------*/
+
+.status {
+    float: right;
+    clear: right;
+    padding-top: 13px;
+
+}
+
+.renter {
+    position: relative;
+    float: left;
+    clear: left;
+    padding-top: 45px;
+}
+
+
+
+
+/*----v Unique RENTAL HISTORY page styles v -----------------*/
+
+.rental-period {
+    float: right;
+    margin-top: 20px;
+}
+
+.price {
+    float: right;
+    clear: right;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.due-date {
+    float: right;
+    clear: right;
+}
+
+.return-status {
+    float: right;
+    clear: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}

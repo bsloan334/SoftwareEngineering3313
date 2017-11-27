@@ -1,0 +1,29 @@
+body {
+    background-color: #FAFAFA;
+}
+
+label {
+    color: #505050;
+}
+
+h2 {
+    color: #505050;
+}
+
+
+.stock-image-size img {
+    max-width: 360px;
+    max-height: 260px;
+
+
+
+    width: 90%;
+    height: 90%;
+    margin-left: 56.46px;
+    margin-right: 56px;
+    margin-bottom: 40px;
+}
+
+.home-img-con {
+    padding-top: 71px;
+}
