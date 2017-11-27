@@ -4,7 +4,6 @@ const db = require("../db");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  console.log("HERE", req.query);
   const query = req.query;
   if (Object.keys(query).length > 0) {
     db.query(
@@ -12,17 +11,17 @@ router.get("/", (req, res, next) => {
       [req.query.title],
       (err, data) => {
         if (err) {
-          return next(err);
+          return res.status(500).send('Unable to query books');
         }
-        res.send(data.rows);
+        res.status(200).send(data.rows);
       }
     );
   } else {
     db.query('Select * from public."books"', [], (err, data) => {
       if (err) {
-        return next(err);
+        return res.status(500).send('Unable to query books');
       }
-      res.send(data.rows);
+      res.status(200).send(data.rows);
     });
   }
 });
