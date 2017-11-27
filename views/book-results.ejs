@@ -1,0 +1,144 @@
+<!--Note: This page is where the user will be redirected to once they have searched for a book.
+          The search results will produce multiple entries of the related books.
+
+    The Book Results Page should function as follows.
+    Book Roads button (top left): When clicked should return to home page.
+    Home Button: Should return home when clicked.
+    Account: Drops down a menu when clicked. 
+        -If logged in, the dropdown menu should display the user's Name & Email
+        -If "Your Books" is clicked, should redirect to renting-out.html page.
+        -If "Rental History" is clicked, should redirect to rental-history.html page.
+        -If User is not logged in for the two previous cases, redirect to login page.
+    Login/Logout: Should display button based on user's login status.
+
+    Search bar: Allows user to input title/ISBN of book to search for related books.
+    Search button: Submits the keywords and redirects to book results page.
+    
+
+    -Additional Comments below. -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <title>Book Results</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="entry.css">
+        <link rel="stylesheet" type="text/css" href="universal-edit.css">
+    </head>
+    
+    <body>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="#">Book Roads</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+                <ul class="navbar-nav ml-auto">
+    
+    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+    
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item">Display Name <br> Display Email</p>
+                            <a class="dropdown-item" href="renting-out.html">Your Books</a>
+                            <a class="dropdown-item" href="rental-history.html">Rental History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-outline-info" role="button">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+    
+        <div class="search-container">
+    
+            <div class="input-group col-sm-8 ml-auto mr-auto">
+                <input type="text" class="form-control" placeholder="Search for book . . ." aria-label="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary" type="button">Search</button>
+                </span>
+            </div>
+    
+        </div>
+    
+        <div class="entry-container">
+            <div class="book-entry">
+                <div class="img-con">
+                    <img src="/home-img/img13.jpeg" alt="No image">
+                </div>
+    
+                <div class="info-con">
+    
+                    <div class="left-info">
+                        <div class="book-title">
+                            <h1 class="bt-style text-style">Book Title</h1>
+    
+                        </div>
+    
+                        <div class="author-name">
+                            <h6 class="text-style">Author Name</h6>
+                        </div>
+    
+                        <div class="isbn">
+                            <h5>isbn:00000000000</h5>
+                        </div>
+    
+                        <div class="owner">
+                            <h2 class="text-style">Owner: Jeff</h2>
+    
+                        </div>
+    
+                        <div class="profile-link">
+                            <a class="text-style">Owner Profile</a>
+                        </div>
+    
+                        <div class="email-info">
+                            <h6 class="text-style">email@email.com</h6>
+                        </div>
+    
+    
+                    </div>
+    
+                    <div class="right-info">
+    
+                        <div class="rental-period">
+                            <h2 class="text-style">Weekly Rental</h2>
+                        </div>
+    
+                        <div class="price">
+                            <h3 class="text-style">$4.25/per week</h3>
+                        </div>
+    
+                        <div class="rent-button">
+                            <button type="button" class="btn btn-outline-dark btn-lg">I want to Rent</button>
+    
+                        </div>
+    
+    
+    
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+    
+    </html>

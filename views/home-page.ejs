@@ -1,0 +1,154 @@
+<!--Note: The Home page should function as follows.
+    Book Roads button (top left): When clicked should return to home page.
+    Home Button: Should return home when clicked.
+    Account: Drops down a menu when clicked. 
+        -If logged in, the dropdown menu should display the user's Name & Email
+        -If "Your Books" is clicked, should redirect to renting-out.html page.
+        -If "Rental History" is clicked, should redirect to rental-history.html page.
+        -If User is not logged in for the two previous cases, redirect to login page.
+    Login/Logout: Should display button based on user's login status.
+    Signup: Redirects user to signup page to create an account.
+
+    Search bar: Allows user to input title/ISBN of book to search for related books.
+    Submit button: Submits the keywords and redirects to book results page.
+    -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <title>Book Roads</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="home-page.css">
+        <link rel="stylesheet" type="text/css" href="universal-edit.css">
+    
+    </head>
+    
+    <body>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="home-page.html">Book Roads</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home-page.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+    
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <p class="dropdown-item">Display Name <br> Display Email</p>
+                            <a class="dropdown-item" href="renting-out.html">Your Books</a>
+                            <a class="dropdown-item" href="rental-history.html">Rental History</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-outline-info" role="button">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="signup.html" class="btn btn-outline-info" role="button">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+    
+        <div class="container">
+            <div class="jumbotron" style="margin-top: 5%">
+                <h1 class="display-3">Welcome to Book Roads</h1>
+                <p class="lead">This is a site where students can rent out books to other students.</p>
+                <p class="lead">Meet. Connect. Rent.</p>
+                <p class="lead">Safe. Reliable. Guarenteed.</p>
+    
+    
+    
+            </div>
+    
+            <form>
+                <div class="form-group">
+                    <label for="Bookinput">Enter the ISBN number or Title for the textbook</label>
+                    <input type="text" class="form-control" id="Bookinput" placeholder="ISBN or Title:">
+                </div>
+    
+                <a href="#" class="btn btn-info" role="button">Submit</a>
+            </form>
+    
+    
+    
+    
+        </div>
+    
+        <div class="row stock-image-size home-img-con">
+            <div class="col-3">
+                <img src="/home-img/img1.jpeg" alt="image-fail">
+            </div>
+            <div class="col-3">
+                <img src="/home-img/img2.jpeg" alt="image-fail">
+            </div>
+            <div class="col-3">
+                <img src="/home-img/img3.jpeg" alt="image-fail">
+            </div>
+            <div class="col-3">
+                <img src="/home-img/img5.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="w-100"></div>
+    
+            <div class="col-3">
+                <img src="/home-img/img6.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="col-3">
+                <img src="/home-img/img8.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="col-3">
+                <img src="/home-img/img9.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="col-3">
+                <img src="/home-img/img10.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="w-100"></div>
+    
+            <div class="col-3">
+                <img src="/home-img/img11.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="col-3">
+                <img src="/home-img/img13.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="col-3">
+                <img src="/home-img/img15.jpeg" alt="image-fail">
+            </div>
+    
+            <div class="col-3">
+                <img src="/home-img/img16.jpeg" alt="image-fail">
+            </div>
+    
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+    
+    </html>

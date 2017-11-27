@@ -1,0 +1,33 @@
+body {
+    background-color: #FAFAFA;
+}
+
+label {
+    color: #505050;
+}
+
+h2 {
+    color: #505050;
+    text-align: center;
+}
+
+form {
+
+    width: 50%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 10%;
+}
+
+#inputEmail {
+    margin-bottom: 15px;
+}
+
+.container {
+    border: 5px solid #80DED9;
+    border-radius: 10px;
+    margin-top: 120px;
+    background-color: #D7F0F2;
+}

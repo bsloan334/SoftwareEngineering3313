@@ -1,0 +1,9 @@
+/*Note: CSS style page to manipulate bootstrap*/
+
+.btn-outline-info {
+    border-color: #80DED9;
+}
+
+.btn-info {
+    background-color: #80DED9;
+}
