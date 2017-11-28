@@ -29,7 +29,11 @@
     </head>
     
     <body>
-        <% include ./header %>
+    
+
+        <% include ./header%>
+    
+    
         <div class="container">
             <div class="jumbotron" style="margin-top: 5%">
                 <h1 class="display-3">Welcome to Book Roads</h1>
@@ -41,13 +45,13 @@
     
             </div>
     
-            <form action="/books" method="get">
+            <form action="/books" method="post">
                 <div class="form-group">
                     <label for="Bookinput">Enter the ISBN number or Title for the textbook</label>
-                    <input type="text" class="form-control" id="Bookinput" name="title"  placeholder="ISBN or Title:">
+                    <input type="text" class="form-control" id="Bookinput" placeholder="ISBN or Title:">
                 </div>
     
-                <a type="button" class="btn btn-info" role="button">Submit</a>
+                <a class="btn btn-info" role="button">Submit</a>
             </form>
     
     
