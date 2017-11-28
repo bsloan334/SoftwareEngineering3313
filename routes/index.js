@@ -9,15 +9,29 @@ router.get('/', (req, res) => {
     res.render("home-page");
 });
 
-router.get('/books', (req, res) => {
-    db.query('Select * from public."books"', [], (err, data) => {
+router.get("/books", (req, res, next) => {
+  const query = req.query;
+  if (Object.keys(query).length > 0) {
+    db.query(
+      'Select * from public."books" where title=$1',
+      [req.query.title],
+      (err, data) => {
         if (err) {
-            res.render("book-results", {error: true})
-        } else {
-            res.render("book-results", {books: data.rows})
+          return res.render('error');
         }
-    })
-})
+        res.render('book-results', {books:data.rows})
+      }
+    );
+  } else {
+    db.query('Select * from public."books"', [], (err, data) => {
+      if (err) {
+        return res.render('error');
+      }
+      res.render('book-results', {books: data.rows});
+    });
+  }
+});
+
 
 router.get('/signup', (req, res) => {
     res.render("signup");
