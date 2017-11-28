@@ -30,6 +30,6 @@ h2 {
 .col{
     background-color:#80DED9;
     height: 100px;
-    position: relative;
-    margin-top: 13%;
+    position: fixed;
+    bottom: 0;
 }
