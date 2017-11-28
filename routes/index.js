@@ -6,6 +6,7 @@ const db = require("../db");
 const router = express.Router();
 
 router.get('/', (req, res) => {
+    console.log(res.app.locals);
     res.render("home-page");
 });
 
@@ -69,11 +70,27 @@ router.post('/login', (req, res) => {
     const { email, password } = req.body;
     fb.auth().signInWithEmailAndPassword(email, password)
     .then(() => {
-        res.redirect('/');
+        db.query('Select firstname, lastname from public."users" where email=$1',[email], (err, data) => {
+            if (err) {return res.render("error"); }
+            res.app.locals.currentUser = data.rows[0];
+            return res.redirect('/');
+        })
     })
     .catch(err => {
         res.redirect('/signup')
     })
 })
+
+router.get('/logout', (req, res) => {
+    fb.auth().signOut()
+    .then(() => {
+        res.app.locals.currentUser = null;
+        return res.redirect('/');
+    })
+    .catch(() => {
+        res.render('error')
+    })
+})
+
 
 module.exports = router;
