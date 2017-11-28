@@ -6,7 +6,7 @@ const db = require("./db/query");
 const authentication = require('./apis/authentication');
 const routes = require("./routes")
 
-const app = express();
+app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -19,6 +19,10 @@ app.use("/api/user", user);
 app.use("/api/books", books);
 app.use("/api/auth", authentication);
 app.use("/", routes);
+app.use((req, res, next) => {
+  req.locals.currentUser = req.user;
+  next();
+})
 
 app.get("*", (req, res) => {
   res.send("That page does not exist");
