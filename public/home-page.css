@@ -15,15 +15,20 @@ h2 {
     max-width: 360px;
     max-height: 260px;
 
-
-
     width: 90%;
     height: 90%;
-    margin-left: 56.46px;
-    margin-right: 56px;
+    margin-left: 56.46px; /*56.46*/
+    margin-right: 56px;/*56*/
     margin-bottom: 40px;
+
 }
 
 .home-img-con {
     padding-top: 71px;
+}
+
+.col{
+    background-color:#80DED9;
+    height: 100px;
+    position: relative;
 }
