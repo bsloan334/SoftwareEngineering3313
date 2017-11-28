@@ -29,37 +29,7 @@
     </head>
     
     <body>
-    
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand" href="/">Book Roads</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-    
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <p class="dropdown-item">Display Name <br> Display Email</p>
-                            <a class="dropdown-item" href="renting-out.html">Your Books</a>
-                            <a class="dropdown-item" href="rental-history.html">Rental History</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="btn btn-outline-info" role="button">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="signup.html" class="btn btn-outline-info" role="button">Sign Up</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    
-    
+        <% include ./header %>
         <div class="container">
             <div class="jumbotron" style="margin-top: 5%">
                 <h1 class="display-3">Welcome to Book Roads</h1>
@@ -71,10 +41,10 @@
     
             </div>
     
-            <form action="/books" method="post">
+            <form action="/books" method="get">
                 <div class="form-group">
                     <label for="Bookinput">Enter the ISBN number or Title for the textbook</label>
-                    <input type="text" class="form-control" id="Bookinput" placeholder="ISBN or Title:">
+                    <input type="text" class="form-control" id="Bookinput" name="title"  placeholder="ISBN or Title:">
                 </div>
     
                 <a class="btn btn-info" role="button">Submit</a>
