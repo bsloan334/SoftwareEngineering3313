@@ -6,7 +6,6 @@ const db = require("../db");
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    console.log(res.app.locals);
     res.render("home-page");
 });
 
@@ -33,9 +32,22 @@ router.get("/books", (req, res, next) => {
   }
 });
 
-// router.post('/books', (req, res) => {
-//     const { }
-// })
+router.post('/book', (req, res) => {
+    const { title, author, isbn, cost } = req.body;
+    db.query('Select id from public."users" where email=$1', [res.app.locals.currentUser.email], (err, data) => {
+      if (err) return res.redirect('/error');
+      db.query('Insert into public."books" (isbn, title, author, rented, owner) values($1, $2, $3, $4, $5);', [isbn, title, author, false, data.rows[0].id], (err, data) => {
+        if (err) {
+          return res.redirect('/error');
+        }
+        res.redirect('/');
+      })
+    })
+})
+
+router.get('/book/new', (req, res) => {
+  res.render('book-upload');
+});
 
 router.get('/signup', (req, res) => {
     res.render("signup");
@@ -70,7 +82,7 @@ router.post('/login', (req, res) => {
     const { email, password } = req.body;
     fb.auth().signInWithEmailAndPassword(email, password)
     .then(() => {
-        db.query('Select firstname, lastname from public."users" where email=$1',[email], (err, data) => {
+        db.query('Select firstname, lastname, email from public."users" where email=$1',[email], (err, data) => {
             if (err) {return res.render("error"); }
             res.app.locals.currentUser = data.rows[0];
             return res.redirect('/');
@@ -84,12 +96,16 @@ router.post('/login', (req, res) => {
 router.get('/logout', (req, res) => {
     fb.auth().signOut()
     .then(() => {
-        res.app.locals.currentUser = null;
+        res.app.locals.currentUser = '';
         return res.redirect('/');
     })
     .catch(() => {
         res.render('error')
     })
+})
+
+router.get('/error', (req, res) => {
+  res.render('error');
 })
 
 

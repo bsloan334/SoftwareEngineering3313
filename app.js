@@ -19,15 +19,17 @@ app.use("/api/user", user);
 app.use("/api/books", books);
 app.use("/api/auth", authentication);
 app.use("/", routes);
-app.use((req, res, next) => {
-  req.locals.currentUser = req.user;
-  next();
-})
+// app.use((req, res, next) => {
+//   req.locals.currentUser = req.user;
+//   next();
+// })
 
 app.get("*", (req, res) => {
   res.send("That page does not exist");
 });
 
-app.listen(8000, "localhost", () => {
-  console.log("Server has started on port: 8000");
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Server has started on port: ${PORT}`);
 });

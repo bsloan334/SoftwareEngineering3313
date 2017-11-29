@@ -36,27 +36,27 @@
 
 
     <div class="container">
-        <form>
+        <form action="/book" method="post">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputBookTitle">Book Title</label>
-                    <input type="text" class="form-control" id="inputBookTitle" placeholder="e.g. Book title 2nd Edition">
+                    <input name="title" type="text" class="form-control" id="inputBookTitle" placeholder="e.g. Book title 2nd Edition">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAuthor">Author</label>
-                    <input type="text" class="form-control" id="inputAuthor" placeholder="Author">
+                    <input name="author" type="text" class="form-control" id="inputAuthor" placeholder="Author">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputISBN">ISBN-13</label>
-                    <input type="text" class="form-control" id="inputISBN" placeholder="ISBN">
+                    <input name="isbn" type="text" class="form-control" id="inputISBN" placeholder="ISBN">
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="inputPrice">Price Per Week</label>
-                    <input type="text" class="form-control" id="inputPrice" placeholder="$0.00">
+                    <input name="cost" type="text" class="form-control" id="inputPrice" placeholder="$0.00">
                 </div>
             </div>
 
